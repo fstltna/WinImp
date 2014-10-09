@@ -1,0 +1,1158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <MyType>WindowsForms</MyType>
+    <ProductVersion>8.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFCA663D-2C14-45EA-B7E9-0828087559EA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>WinACE</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WinACE.frmAbout</StartupObject>
+    <AssemblyMajorVersion>2</AssemblyMajorVersion>
+    <AssemblyMinorVersion>5</AssemblyMinorVersion>
+    <AssemblyRevisionNumber>70</AssemblyRevisionNumber>
+    <GenerateRevisionNumber>False</GenerateRevisionNumber>
+    <AssemblyCompanyName>WinACE project at sourceforge.net/projects/winace (originally Jim Simons)</AssemblyCompanyName>
+    <StartWithIE>False</StartWithIE>
+    <ApplicationIcon>WinACE.ico</ApplicationIcon>
+    <RootNamespace>WinACE</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>WinACE.xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DefineDebug>True</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>WinACE.xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DefineDebug>False</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.Compatibility">
+      <Name>Microsoft.VisualBasic.Compatibility</Name>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks">
+      <Name>Microsoft.VisualBasic.PowerPacks</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML">
+      <Name>System.XML</Name>
+    </Reference>
+    <COMReference Include="AxMSComctlLib">
+      <Guid>{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxMSDBCtls">
+      <Guid>{FAEEE763-117E-101B-8933-08002B2F4F5A}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxMSFlexGridLib">
+      <Guid>{5E9E78A0-531B-11CF-91F6-C2863C385E30}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxMSWinsockLib">
+      <Guid>{248DD890-BB45-11CF-9ABC-0080C7E7B78D}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="DAO">
+      <Guid>{00025E01-0000-0000-C000-000000000046}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSComctlLib">
+      <Guid>{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSDBCtls">
+      <Guid>{FAEEE763-117E-101B-8933-08002B2F4F5A}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSFlexGridLib">
+      <Guid>{5E9E78A0-531B-11CF-91F6-C2863C385E30}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSWinsockLib">
+      <Guid>{248DD890-BB45-11CF-9ABC-0080C7E7B78D}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSXML2">
+      <Guid>{F5078F18-C551-11D3-89B9-0000F81FE221}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.VisualBasic.Compatibility" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="commoditybox.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>commoditybox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="commoditybox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmpCmdQueue.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpCommon.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpDataBase.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpireParse.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpItem.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpItems.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpNationList.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpSectorMarker.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpSymbolEntry.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpSymbolTable.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpSymbolTables.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpTable.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpTableColumn.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpTables.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpTelegram.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpUnitView.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpXMLRPC.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpXMLRPCEvent.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUnitDes.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAddUnitDes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUnitDes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChat.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmChat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClear.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmClear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorScheme.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmColorScheme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorScheme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCommonDialog.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmCommonDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCommonDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrawMap.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmDrawMap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrawMap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpCmd.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmEmpCmd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpCmd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpireLogin.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmEmpireLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpireLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGameChoice.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmGameChoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGameChoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHTTPSettings.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmHTTPSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHTTPSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDIPreview.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmMDIPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDIPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNavCtrl.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmNavCtrl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNavCtrl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOptions.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPreview.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintMap.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPrintMap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintMap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptAnti.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptAnti.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptAnti.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptAttack.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptAttack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptAttack.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptBoard.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptBomb.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptBomb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptBomb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptBuild.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptBuild.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptBuild.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptCensus.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptCensus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptCensus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptChange.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptChange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptChange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptCollect.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptCollect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptCollect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptCom.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptCom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptCom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptConvert.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptConvert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptConvert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptCopyGameDB.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptCopyGameDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptCopyGameDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptDes.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptDes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptDes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptDist.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptDist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptDist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptExplore.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptExplore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptExplore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptExportIntelligence.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptExportIntelligence.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptExportIntelligence.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptFire.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptFire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptFire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptFleet.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptFleet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptFleet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptFollow.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptFollow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptFollow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptFuel.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptFuel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptFuel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptHelp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptHelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptHelp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptImportOffset.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptImportOffset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptImportOffset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptImprove.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptImprove.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptImprove.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptIsland.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptIsland.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptIsland.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptLand.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptLand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptLand.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptLaunch.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptLaunch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptLaunch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptLoad.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptLoad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptLoad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptLook.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptLook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptLook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptMap.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptMap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptMap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptMission.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptMission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptMission.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptMove.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptMove.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptMove.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptNation.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptNation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptNation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptNav.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptNav.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptNav.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptNews.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptNews.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptNews.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptOffer.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptOffer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptOffer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptOrder.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptOrigin.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptOrigin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptOrigin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptPath.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptPath.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptPath.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptProdSummary.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptProdSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptProdSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptRadar.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptRadar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptRadar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptRecon.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptRecon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptRecon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptSail.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptSail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptSail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptScrap.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptScrap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptScrap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptSectors.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptSectors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptSectors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptShoot.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptShoot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptShoot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptShow.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptShow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptShow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptSimpleTerritory.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptSimpleTerritory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptSimpleTerritory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptTerritory.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptTerritory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptTerritory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptThresh.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptThresh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptThresh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptThreshAll.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptThreshAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptThreshAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptTorp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptTorp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptTorp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptTrans.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptTrans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptWarload.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptWarload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptWarload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptWaypoints.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptWaypoints.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptWaypoints.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptWipe.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptWipe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptWipe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromptWire.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPromptWire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromptWire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelationsGrid.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmRelationsGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelationsGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSatellitePath.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSatellitePath.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSatellitePath.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScript.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmScript.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScript.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectColor.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSelectColor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectColor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServerQuery.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmServerQuery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmServerQuery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelegram.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmTelegram.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelegram.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolCheMarker.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmToolCheMarker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolCheMarker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolFeeder.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmToolFeeder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolFeeder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolFortify.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmToolFortify.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolFortify.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolHarbor.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmToolHarbor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolHarbor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolHarborQueue.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmToolHarborQueue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolHarborQueue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolNationLvl.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmToolNationLvl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolNationLvl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolProduction.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmToolProduction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolProduction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolRange.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmToolRange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolRange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolShow.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmToolShow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolShow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolWorldBuild.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmToolWorldBuild.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolWorldBuild.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnitView.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmUnitView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnitView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HexGrid.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LineShapeArray.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewspaperParse.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NukeDamage.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OnTopAPI.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlaneRange.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlayersParse.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeSupport.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UTF8.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WinAceRoutines.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XdumpParse.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="commoditybox.resX">
+      <DependentUpon>commoditybox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resX">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUnitDes.resX">
+      <DependentUpon>frmAddUnitDes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChat.resX">
+      <DependentUpon>frmChat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClear.resX">
+      <DependentUpon>frmClear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorScheme.resX">
+      <DependentUpon>frmColorScheme.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCommonDialog.resX">
+      <DependentUpon>frmCommonDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrawMap.resX">
+      <DependentUpon>frmDrawMap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpCmd.resX">
+      <DependentUpon>frmEmpCmd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpireLogin.resX">
+      <DependentUpon>frmEmpireLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGameChoice.resX">
+      <DependentUpon>frmGameChoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHTTPSettings.resX">
+      <DependentUpon>frmHTTPSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDIPreview.resX">
+      <DependentUpon>frmMDIPreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNavCtrl.resX">
+      <DependentUpon>frmNavCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptions.resX">
+      <DependentUpon>frmOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreview.resX">
+      <DependentUpon>frmPreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintMap.resX">
+      <DependentUpon>frmPrintMap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptAnti.resX">
+      <DependentUpon>frmPromptAnti.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptAttack.resX">
+      <DependentUpon>frmPromptAttack.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptBoard.resX">
+      <DependentUpon>frmPromptBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptBomb.resX">
+      <DependentUpon>frmPromptBomb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptBuild.resX">
+      <DependentUpon>frmPromptBuild.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptCensus.resX">
+      <DependentUpon>frmPromptCensus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptChange.resX">
+      <DependentUpon>frmPromptChange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptCollect.resX">
+      <DependentUpon>frmPromptCollect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptCom.resX">
+      <DependentUpon>frmPromptCom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptConvert.resX">
+      <DependentUpon>frmPromptConvert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptCopyGameDB.resX">
+      <DependentUpon>frmPromptCopyGameDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptDes.resX">
+      <DependentUpon>frmPromptDes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptDist.resX">
+      <DependentUpon>frmPromptDist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptExplore.resX">
+      <DependentUpon>frmPromptExplore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptExportIntelligence.resX">
+      <DependentUpon>frmPromptExportIntelligence.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptFire.resX">
+      <DependentUpon>frmPromptFire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptFleet.resX">
+      <DependentUpon>frmPromptFleet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptFollow.resX">
+      <DependentUpon>frmPromptFollow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptFuel.resX">
+      <DependentUpon>frmPromptFuel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptHelp.resX">
+      <DependentUpon>frmPromptHelp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptImportOffset.resX">
+      <DependentUpon>frmPromptImportOffset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptImprove.resX">
+      <DependentUpon>frmPromptImprove.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptIsland.resX">
+      <DependentUpon>frmPromptIsland.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptLand.resX">
+      <DependentUpon>frmPromptLand.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptLaunch.resX">
+      <DependentUpon>frmPromptLaunch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptLoad.resX">
+      <DependentUpon>frmPromptLoad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptLook.resX">
+      <DependentUpon>frmPromptLook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptMap.resX">
+      <DependentUpon>frmPromptMap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptMission.resX">
+      <DependentUpon>frmPromptMission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptMove.resX">
+      <DependentUpon>frmPromptMove.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptNation.resX">
+      <DependentUpon>frmPromptNation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptNav.resX">
+      <DependentUpon>frmPromptNav.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptNews.resX">
+      <DependentUpon>frmPromptNews.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptOffer.resX">
+      <DependentUpon>frmPromptOffer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptOrder.resX">
+      <DependentUpon>frmPromptOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptOrigin.resX">
+      <DependentUpon>frmPromptOrigin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptPath.resX">
+      <DependentUpon>frmPromptPath.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptProdSummary.resX">
+      <DependentUpon>frmPromptProdSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptRadar.resX">
+      <DependentUpon>frmPromptRadar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptRecon.resX">
+      <DependentUpon>frmPromptRecon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptSail.resX">
+      <DependentUpon>frmPromptSail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptScrap.resX">
+      <DependentUpon>frmPromptScrap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptSectors.resX">
+      <DependentUpon>frmPromptSectors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptShoot.resX">
+      <DependentUpon>frmPromptShoot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptShow.resX">
+      <DependentUpon>frmPromptShow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptSimpleTerritory.resX">
+      <DependentUpon>frmPromptSimpleTerritory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptTerritory.resX">
+      <DependentUpon>frmPromptTerritory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptThresh.resX">
+      <DependentUpon>frmPromptThresh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptThreshAll.resX">
+      <DependentUpon>frmPromptThreshAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptTorp.resX">
+      <DependentUpon>frmPromptTorp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptTrans.resX">
+      <DependentUpon>frmPromptTrans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptWarload.resX">
+      <DependentUpon>frmPromptWarload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptWaypoints.resX">
+      <DependentUpon>frmPromptWaypoints.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptWipe.resX">
+      <DependentUpon>frmPromptWipe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromptWire.resX">
+      <DependentUpon>frmPromptWire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelationsGrid.resX">
+      <DependentUpon>frmRelationsGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resX">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSatellitePath.resX">
+      <DependentUpon>frmSatellitePath.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScript.resX">
+      <DependentUpon>frmScript.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectColor.resX">
+      <DependentUpon>frmSelectColor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServerQuery.resX">
+      <DependentUpon>frmServerQuery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelegram.resX">
+      <DependentUpon>frmTelegram.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolCheMarker.resX">
+      <DependentUpon>frmToolCheMarker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolFeeder.resX">
+      <DependentUpon>frmToolFeeder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolFortify.resX">
+      <DependentUpon>frmToolFortify.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolHarbor.resX">
+      <DependentUpon>frmToolHarbor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolHarborQueue.resX">
+      <DependentUpon>frmToolHarborQueue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolNationLvl.resX">
+      <DependentUpon>frmToolNationLvl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolProduction.resX">
+      <DependentUpon>frmToolProduction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolRange.resX">
+      <DependentUpon>frmToolRange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolShow.resX">
+      <DependentUpon>frmToolShow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolWorldBuild.resX">
+      <DependentUpon>frmToolWorldBuild.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnitView.resX">
+      <DependentUpon>frmUnitView.vb</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="WinACE.ico" />
+    <None Include="_UpgradeReport.htm">
+      <SubType>Preview</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
