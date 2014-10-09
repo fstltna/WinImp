@@ -1,0 +1,141 @@
+Version 2.00 changes
+
+Bug Fixes
+=========
+Fixed Bug: Fleet selection in Nav box caused program to lock up.
+
+Fixed Bug: When you double click on research sectors, why don't they give a
+production report like tech centers do?
+
+Fixed Bug: The GUI method of adding units to an army passes an unknown command to
+empire... it tries to say 'armyadd' rather than just 'army'
+
+Fixed Bug: Shift origin not handling wrap around correctly on 
+bmap information
+
+Fixed Bug: Shift origin not updating sea sector information (fert and
+oil content)
+
+Fixed Bug: Show nuke information showing up in ship list
+
+Fixed Bug: Added switch for BIG_CITIES and for GO_RENEW and took 
+these into account when computing new efficency and production.
+
+Fixed Bug: Not saving Nation Variables for use off line
+
+Fixed Bug: Not recognizing mountain captial in nation string.
+
+Fixed Bug: Script box will now alway be as wide as toolbar
+
+Fixed Bug: Tend command not updating ships.
+
+Fixed Bug: Nav/March prompt box freezes up program when sector number input
+
+Fixed Bug: Parse routine for unit dumps was not handling ship name with 
+spaces in it.
+
+Fixed Bug: Designating a uranium mine at low tech caused crash.
+
+Fixed Bug: Bottom row not correctly numbered
+
+Fixed Bug: Error generated when you try to type string in Nav Box.
+
+Major Enhancements
+==================
+Rewrote map scrolling and boundry functions.  Map will now let you
+scroll past the "end of the world" and will handle wrapping. 
+Large change scroll is now based on magnification rather than
+a fixed 10 rows, and is about 3/4 of a screen.  Extensive re-write
+to Map Drawing routines cut screen refresh times in half.
+Zoom menu enhanced to allow faster zoom/unzoom
+
+Tightened error handling routines to better trap and report errors and
+hopefully limit crashes.  Added an error log that is created on disk
+when an error is encountered.
+
+Added nuke support.
+1) Mark Nuke option added to Unit Menu to highlight 
+   sectors with nukes
+2) Message field in sector box now shows the number 
+   and type of nukes in the sector
+3) Transport prompt box now works for nukes (but only 1 at a time)
+4) Build and show prompt boxes now work for nukes
+5) Nuke menu appears on left click if there are nukes in the sector
+6) Arm and Disarm now forces update of nuke information
+
+Added Sector Damage analysis
+Shelling, bombing, or launching at a sector now returns what the
+client thinks is the new efficency of the sector after the damage
+is applied.
+
+Updated Build Projection Tool 
+1) now treats forts like headquarters, but doesn't allow builds
+2) now defaults to worst case.
+3) Allows selection of current or update avail
+4) Saves the avail selections for each of the four sector types
+to the local database
+5) Added a Next Button to jump to next sector with builds
+
+Added Plane Combat Parsing and Report.
+WinACE now parses plane combat reports and will give a report on 
+enemy planes encountered and their current efficenecy.  Is cumulative
+over multiple battles, and resets at the update.
+
+Added Production Summary Report.  
+Shows production figures and a number of "Error" messages, either 
+for your country as a whole, or for a selected distribution center.
+Does not take into account delivery!!
+When run for a distribution center, will calculates the amount of 
+mobility used by dist center to fill all threshold requests.
+
+Added logic to calculate fire ranges for forts, ships, and land 
+units.  Added information now shows up on fire prompt box, and 
+new Range Table tool.  Added logic to show plane ranges and 
+estimated flight mobility costs on plane flight prompt boxes.
+
+Added logic to parse version options, and support BIG_CITIES and
+GO_RENEW
+
+Added export most recent telegrams that will export only the
+telegrams not yet exported.  Puts them in sequentially numbered files
+so they don't overwrite.  Good for co-rulers to update each other on 
+missed tele's
+
+Mapped all keyboard input when on main screen to go to the command
+line - should help command line users and avoid the loss of focus
+problem.
+
+
+Minor Enhancements
+==================
+Moved some common plane and ship commands back to main pop up menu.
+
+Added logic to immediately update the unit box when updated unit
+information is read in.
+
+Changed telegraph delete function so it jumps to the prior telegraph
+in the list, makes it easier to delete a batch of telegrams.
+
+Log file added.  Program now outputs history of session to log file.
+Keeps last 5 logs per game.
+
+Added message marker for missile attacks.
+
+Page up and Page on the map screen will now scroll the command 
+results display box.
+
+Increased Zoom options and moved to a sub menu.  Now can enter 
+magnification level desired for faster zoom in/zoom out.
+
+Moved display options to a sub menu.  Added an option to have
+the command result box not reset on new commands.
+
+Updated designate box to allow default thresholds to be loaded 
+from and saved to the registry.
+
+Show expanded to have the basic show options available as a 
+seperate menu choice.
+
+Added representative back to login box at Overlord's request.
+
++++ End of File ++++

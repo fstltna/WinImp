@@ -1,0 +1,346 @@
+version 2.2.23 changes:
+-fixed telegram to break message into lines and remove LF or CRLF combinations and not delete blank lines. (Ron Koenderink)
+-update the map with info satellite report. (Ron Koenderink)
+-remove a dump from spy, as none of our sectors should change. (Ron Koenderink)
+-store and retrieve the AutoUpdate and AutoRead settings for each the connection. (Ron Koenderink)
+-added offline button in startup sequence. (Ron Koenderink)
+-added forms for Buy/Sell/Reset and Market. (Ron Koenderink)
+-removed trade report, as trade is interactive and does not work as a report. (Ron Koenderink)
+-removed the show sect s from the timer as this information is static and is checked upon startup, added to Update All. (Ron Koenderink)
+-added strength info to the Sector Info/Panel. (Ron Koenderink)
+-fixed enemy unit grid to not change -1 for x or y to ???. (Ron Koenderink)
+-fixed the saving of enemy unit movement intelligence so locations including -1 work. (Ron Koenderink)
+-added capturing the neweff output into a report. (Ron Koenderink)
+-added route command to Maps menu. (Ron Koenderink)
+-fixed Duplicate Spy reports, one with spelling mistake, combined them, No functionality change. (Ron Koenderink)
+-fixed leap year bug in SecondsDifference, calculation used for determining update times. (Ron Koenderink)
+-added ExportNation (not complete yet). (Ron Koenderink)
+-added Delivery ColorScheme, similar information to route. (Ron Koenderink)
+-added Multiple Sector Selection to Move/Distribute/Deliver/Threshold/Designate and Conditional support. (Ron Koenderink)
+-fixed a bug in the Attack/Probe/Look parsing where mine and tech. center were not properly detected and switched to wilderness.  (Ron Koenderink)
+-fixed the deliver value being erased when selecting a target location. (Ron Koenderink)
+-modified CopyGameInfo/CopySector: added road/rail/defense/mines, fixed stage 1 so headquarters and airport do
+not overlap the harbor, modified stage 2 to use the sector offset, added owner to build to solve a problem
+deity building units (uses owner 1 as fake owner for filler units) and unit dumps for stage 1 to 3. (Ron Koenderink)
+            
+version 2.2.22 changes:
+-moved the initial 'show sect s' inside the database refresh and suppress the display in the left command window output. (Ron Koenderink)
+-moved buildtype to be private variable of FillGrid, code cleanup. (Ron Koenderink)
+-change mnuPlaneScutle_Click() to mnuPlaneScuttle_Click(), fixed spelling, no functional change. (Ron Koenderink)
+-fixed scuttle and scrap to update the grid or sector after command completes. (Ron Koenderink)
+-added back ndump timestamp with changes to lost to make it work.  (Ron Koenderink)
+-fixed arm and disarm to update the grid or sector after command completes. (Ron Koenderink)
+-changed initial field selection to be the either direction or combo box for Build command. (Ron Koenderink)
+-added clear old thresholds when designate. (Ron Koenderink)
+-added updating the map to show X when mining (ship, land or plane). (Ron Koenderink)
+-removed duplicate cases in ConditionMet which also had incorrect logic, there should be no functional change. (Ron Koenderink)
+-switch Oil and Fert fields so they display correctly on the Sea sector panel. (Ron Koenderink)
+-added processing for land sectors in Anti-Sub patrols during recon's, removes the add database identify window pop ups. (Ron Koenderink)
+-fixed code to accomodate spaces in the nation name during recon and to set the owner to ??? when not present. (Ron Koenderink)
+-modified AddEnemyUnitInfo/AddEnemySectInfo to preserve information from different intelligence sources. (Ron Koenderink)
+-changed explore from to disable the mode selection when in path mode. (Ron Koenderink)
+
+version 2.2.21 changes:
+-fixed Unit List to show enemy units. (Ron Koenderink)
+-fixed EnemyUnit to show ??? if the information not known, sometimes it would show 0. (Ron Koenderink)
+-changed Set Owner to have different text for OK/Cancel buttons that is more reflective of function. (Ron Koenderink)
+-removed ndump timestamp. (Ron Koenderink)
+-removed duplicates from nSector list, no functional change. (Ron Koenderink)
+-changed Transport submit command to True so it appears in the F9 list. (Ron Koenderink)
+-added nuke information to bottom status line when on the map. (Ron Koenderink)
+-nation list now in relations only so do not need "report *". (Ron Koenderink)
+-change prompt will automatically shorten country name to 19, remove any space in the front and back to make matching
+easier. (Ron Koenderink)
+-fixed relation grid to understand country names with spaces in them, length the max. length of country name to 19 characters,
+should now match server. (Ron Koenderink)
+-added 'Not Yours' Color scheme to the Normal display.  (Ron Koenderink)
+-fixed the Unit grid to have the sector/nation list for enemy units. (Ron Koenderink)
+-reduce the civilian value by one so the sector is not abandoned when double clicking in the move window. (Ron Koenderink)
+-added 'bar' to the list of database fields that is used to get the current quantities from the database so it is filled in
+Move All and load/unload/tend commands. (Ron Koenderink)
+-added form reject using frmPromptOffer, splitting reject into to two menu items, rename accept menu to Acceptance Report,
+moved the field logic to the form for frmPromptOffer. (Ron Koenderink)
+-added bulk 'move' capability to the move command, the new mode supports both one sector to many and many to one sector,
+it uses the F4 condition logic to determine the many. (Ron Koenderink)
+-added NextCommand to "update aborting command" logic, it prevents a lockup if in a offer treaty command
+and an update occurs, but not handle the read telegram correctly. (Ron Koenderink)
+
+version 2.2.20 changes:
+-change ltend so it starts with ships in the unit grid instead of land units. (Ron Koenderink)
+-change treaty so output goes to a report window. (Ron Koenderink)
+-Added tooltip to cmdBackShort and cmdNextShort in BuildTool. (Ron Koenderink)
+-Change worldbuilder for non-deity mode, if left button is blank then no designation. (Ron Koenderink)
+-Update the about box to 4.2.12 of the server code. (Ron Koenderink)
+-protect against to high tech level in frmToolRange. (Ron Koenderink)
+
+version 2.2.19 changes:
+-general reformating frmPrompt* (Ron Koenderink)
+-setting the starting field frmPrompt* (Ron Koenderink)
+-moved the field selection logic from frmDrawMap to individual forms frmPrompt* (Ron Koenderink)
+-added Unit activation to frmPrompt* (Ron Koenderink)
+-added timestamp for ndump (Ron Koenderink)
+-added quantity selection for transporting nukes (Ron Koenderink)
+-update the quantities in Threshold All when changing origin (Ron Koenderink)
+-update the quantity in Shoot when changing origin or the option (Ron Koenderink)
+-removed hard coded units from frmPromptNav (Ron Koenderink)
+-added check to the commodity selection for frmPromptMove (Ron Koenderink)
+-fixed map functions (smap,lmap, etc) so they would show in Report Window.  Fixed options for
+maps so more then one option can be selected. (Ron Koenderink)
+-for marking, only do the first ship and reset the unit field (Ron Koenderink)
+-switched OK button title to "Show" for marking (Ron Koenderink)
+-added logic for multiple units being load in frmPromptLoad, shows quantity for load and lload now,
+fixed ltend (Ron Koenderink)
+-select the unit field when changing to option2 or option3 in frmPromptFuel (Ron Koenderink)
+-added back frmPromptFollow file, added menu click to call follow. (Ron Koenderink)
+-fixed frmPromptFleet to work for Army and Wing as well. (Ron Koenderink)
+-removed unit hard coding for frmPromptAttack(assault and attack). Clear ship list to prevent
+invalid ships from appearing the ship combo list after the target was moved. (Ron Koenderink)
+-transport to ndump command list (automatically requests a ndump when transport used). (Ron Koenderink)
+-fixed the parsing of show nuke capabilities to store the data in the expected locations. (Ron Koenderink)
+-added computation of path costs for nuke transport. (Ron Koenderink)
+-fixed parsing of ndump to temporarly remove the country field in deity mode.
+-added cutoff and level reports. (Ron Koenderink)
+-fixed cargo (ship) to show as a report. (Ron Koenderink)
+-fill in txtNum in Convert based on the command and origin. (Ron Koenderink)
+-adjust field position on frmPromptCensus so the caption would not overwritten the "for" label
+(Ron Koenderink)
+-build options are now based on the sector selected. (Ron Koenderink)
+-restricted options in transport to items in the starting sector. (Ron Koenderink)
+-removed Path and Route menu items from Sector->Deliver menu (Ron Koenderink)
+-removed Plane Cargo Menu item (Ron Koenderink)
+-change Display types to enums, Added SetUnitDisplay to control the unit grid. Privatized some
+of the display info. (Ron Koenderink)
+-changed to use SelX and SelY in frmDrawMap to allow the top level menu to know current sector. (Ron Koenderink)
+-changed frmDrawMap to show the InRange Unit grid when in InRange mode and changing sectors. (Ron Koenderink)
+-set up automatic load of the Unit field for planes and land units similiar to Ship for single sector. (Ron Koenderink)
+-added ndump to Databse refreshes. (Ron Koenderink)
+-reposition some fields for Consider form to display correctly. (Ron Koenderink)
+-made the top level unit reflective of current sector. (Ron Koenderink)
+-changed the subcombo box so the different types of Fleets can be identified (Wing A and Fleet A). (Ron Koenderink)
+-Added a type for Train based on train unit characteristic. (Ron Koenderink)
+-Change Fleet check to include A-Z and ~. (Ron Koenderink)
+-Clear markings and sector list when switching territories. (Ron Koenderink)
+-Reposition options in build form to prevent overlapping text. (Ron Koenderink)
+-Added more commands to Update All option (map, bmap, order, mission, nation, report and relations). (Ron Koenderink)
+-Suppress the display of nation when updating from enlist or demobilize command. (Ron Koenderink)
+-Changed anti menu to require mil and mob and to not require occupied enemy sector. (Ron Koenderink)
+-fixed the divide by zero error when Firing on a sea sector. (Ron Koenderink)
+-fixed the default deliver shell from a "s" to "i". (Ron Koenderink)
+-in form for Fly (frmPromptRecon), removed the repeat option as it is not appropriate for fly command. (Ron Koenderink)
+
+version 2.2.18 changes:
+-missed some changes for offline mode and added functionality to be able to go offline mode when server
+is disable or down (Ron Koenderink)
+
+version 2.2.17 changes:
+-added Offline mode - limited functionality, viewing of local db only. (Ron Koenderink)
+
+version 2.2.16 changes:
+-refixed the Telegram bug so the Bulletins would have Linefeeds added but not reports which
+have them in the body of the text stored in the db. (Ron Koenderink)
+
+version 2.2.15 changes:
+-switched the Unit Filters to a drop down list, added a number of new filters,
+made the filters more command and capability/ability based, remove hardcoding,
+added unit filters to a number of commands (Ron Koenderink)
+-fixed Telegram bug which only save the first 255 bytes of the telegram (Ron Koenderink)
+-added a change to get more Countries names with the HIDDEN option active (Ron Koenderink)
+-added Sea title to the Sea Frame and reposition the fields (Ron Koenderink)
+
+version 2.2.14 changes:
+-removed the "Ship Stats" table from the database. This table was static and never being refreshed
+from the server.  But, the ship stats data was being loaded into the "Build Info" table.  So I
+replaced all references to "Ship Stats" (in the Range Tool) with "Build Info". Note that this makes 
+2.2.14 databases incompatible with all previous versions.  Older databases should still work with
+2.2.14, but I haven't tested this..  This change was necessary to ensure compatibility with LOTR-II.
+The bug was pointed out by Jeff Cotter.
+-Removed some hardcoded values from the Range tool (dealing with land firing ranges) and replaced
+them with database references as above.
+-added for additional exploration modes (Ron Koenderink)
+-corrected Map wraparound in OffsetSectorLocation (used in exploration and other places) (Ron Koenderink)
+-corrected SectorDistance to consider the shortest distance may be across the map boundary. (Ron Koenderink)
+-fixed explore to proper account for the units being explored with (Ron Koenderink)
+-fixed bugs from code cleanup in 2.2.13 ch needs to be a string not a Integer for cbCom_KeyPress,
+SetThresh function needed in frmPromptThresAll, SetSectorLabels function in frmPromptLoad,
+DesignateHex in frmToolWOrldBuild, LoadCombo in frmPromptFleet, ToggleHex in frmPromptTerritory,
+finished removal of strString in frmWarload and frmPromptFuel (Ron Koenderink)
+-fixedEmpireError Added CStr to Application versions and removed semicolon (Ron Koenderink)
+-add support for civilians on supply type land units (Ron Koenderink) 
+
+version 2.2.13 changes:
+-Fixes by Ron Koenderink to launch, bomb, and paradrop.
+-Major code cleanup by Eric James (removed a *bunch* of unused variables and procedures)
+-fixed a bug in the sector tab maximize button that caused the status bar to disappear when you
+restored the unit panel.  Also changed it so that the maximum button has an icon that actually
+looks like a maximize icon instead of the 'X' which looked exactly like a close icon...
+-sector panel will now tell you which of your 'c' (or '^') sectors is your national capital and
+which ones are just spare capitals.
+-Move All box now shows mobility used like Move box does.
+
+version 2.2.12 changes:
+-several internal changes in the Famine Relief tool in preparation for extensions in the next
+release.  These changes should not affect the functionality.  Please let me know if Famine
+Relief gives you any problems
+-minor Bug fix in Login procedure
+-Bug fix in Show Report (Capabilities) thanks to Ron Koenderink.
+-Fixed a minor bug involving scripted "zdone y" which could cause a crash (no one probably ever
+got bit by this, but I use scripted zdones a lot in my testing)
+-Bug fix in Distribution Tab where the text is not big enough to hold titles like radar installation (Ron Koenderink)
+-Added new designation information to Distribution Tab (Ron Koenderink)
+-Bug fix in Show Report where statistics were at a different tech level then capabilities and build (Ron Koenderink)
+-Bug fix in Ctrl-T (Threshold All) would crash if done on a sea or unknown sector. (Ron Koenderink)
+-Added the 'Show All' box back to the Move prompt (but it still doesn't seem to work perfectly?)
+
+version 2.2.11 changes:
+-slightly better handling of "v" and ":" sectors for IW5 folks.  The production summary tool
+doesn't include them yet though.  That code needs a total rewrite, which I will do eventually...
+-explore prompt will now actually explore with more than 1 civ per sector if you ask it to
+-MoveAll command does not automatically display the Units tab for no reason
+-Changed things so that long announcements are wrapped and displayed properly (of course, WinACE
+will still *generate* long telegrams and announcements, but now at least it can display it's own
+announcements properly.  I'll fix it so that it generates proper telegrams RSN).
+-Removed 'Show All' checkbox from the Move prompt because I don't see any reason that it could
+ever possibly be useful, and every time I click it (on accident) it seems to screw up the 
+command and the server says "unrecognized item '4'".  
+
+version 2.2.10 changes:
+-Fixed that horrible bug where a parse error with ship orders would corrupt the database
+and cause WinACE to crash with "Error 94, Invalid use of Null" everytime the cursor went
+over that ship.  Also fixed a few other minor bugs.
+
+version 2.2.9 changes:
+-Fixed a bug similar to the bank bug fixed in 2.2.8, but affecting d, i, and % sectors.
+(Threw in "v" sectors as well for you IW4 folks...)
+-Fixed a minor inconsistency regarding retreat settings in the navigation dialogs
+
+version 2.2.8 changes:
+-Fixed a bug where production calculations for banks was incorrect
+-Fixed a bug where f/h/!/* sectors would not display the proper amount of avail to be produced.
+
+version 2.2.7 changes:
+-Added an option to the relations grid to vary the width of the columns at the request of some IW4
+players who said that they couldn't fit all the countries on one screen.
+-Added support for the SLOW_WAR states to the relations grid.  Not that anyone really ever plays
+SLOW_WAR, but I thought while I was redoing that code anyway, I should add it for completeness.
+
+Version 2.2.6 changes:
+Pretty much everything in version 2.2.6 is due to Thomas Lullier.  Expect it to remain that way for a 
+few more months, as I'm pretty busy right now.  Anyone else who wants to start contributing, feel free...
+
+- added the warload command : load 999 mil/gun/shell/oil/pet/food in ships ou land units
+this command needs to be tweaked to prevent oil/pet and food load if NOFUEL and/or NOFOOD
+- typo corrected in "Launch" box
+- auto select unit type to be loaded when 'plane' or 'land' is clicked in load box
+- auto "show sect s" at winace run when autoupdate on - (should work at update - not tested).  
+This should help out with RESPOP games.
+- an additional check for max prod against 'material_limit'
+- a new option 'max prod instead of max pop' (a toggle for idle civ - example: a 100% radar with 760 civ 
+  has 759 civ idle (for max prod, as in 2.10) or missing 8 civ (for max pop, as in2.11b) )
+
+
+Version 2.2.5 changes
+
+-Added some more buttons to the toolbar, including some that had been missing from 2.1.1, and others added
+thanks to Thomas Lullier.
+-Production code from 2.1.1 merged in (but beware, there are several known bugs in this code.  They will be
+fixed in the next release).
+
+Version 2.2.4 changes
+
+Bug Fixes
+=========
+
+-Sector designation had gotten screwed up last release.  Fixed it.  I also integrated a lot of the 2.1.1 changes
+from the file empcommon.bas.  Hopefully, this has fixed bugs that no one has found yet.
+
+Version 2.2.3 changes
+
+Bug Fixes:
+==========
+
+ The Show report was all messed up.  When copying it over from 2.1.1, I seem to have forgotten to copy about
+half the code.  I think it should all be fully functional now.  If not, someone please tell me.
+
+Version 2.2.2 changes
+
+General
+=======
+
+-I have obtained from Jim Simons the source code to v2.1.1, the LOTR-enchanced version, as well as unreleased
+source code of the latest things he was working on before he stopped working on WinACE.  I am now in the
+process of integrating these changes back into my source tree.  Some of the easy ones have been integrated
+already, look for most of the rest in my next release.  The notable ones so far are:
+  -The new Show report is back in
+  -Color scheme can now be set by distribution sector.
+
+Bug Fixes
+=========
+
+-Giving a ship a "sail" command and then attempting to look at it's orders with "sorder" would cause a parse
+error.  Fixed.
+
+Minor Enchancements
+===================
+
+-Rudimentary Support for an "exec" command added.  You can now type "exec script1.txt" at the prompt to execute
+a script, or embed that within a script to have scripts call other scripts.  This does not utilize the 
+empire server execute command, it simply reads lines from the file and submits them one at a time.  
+Some scripts won't work exactly perfectly when being exec'ed. YMMV.  
+
+-The Threshold and Threshold All prompts can now automatically push or pull supply from distribution centers
+to adjust the level of commodities in a sector the match the new threshold.
+
+-The feeder tool enchancements I made in 2.2.0 could get a little BTU intensive.  Made it a little more intelligent
+in order to use fewer BTUs.
+
+
+
+Version 2.21 changes
+
+Bug Fixes
+=========
+
+-Typing "sorder" would hang the console.  Fixed so that it properly asks for a fleet number instead
+
+-If a bogus order was given, WinACE would not grok the "no route possible" message from sorder.  Fixed.
+
+-Relations grid really works this time (I hope!)
+
+-Plague risk is now calculated correctly (I think.  The game I'm currently playing has NO_PLAGUE enabled,
+so I won't be getting much chance to test it.  If people who are currently playing plague games could let
+me know if it is fixed, that would be great)
+
+Minor Enchancements
+===================
+
+-There is now an optional auto bmap refresh when ships stop.
+
+-Ships can now autolook as they are navigating (they could before, but only if you specified the full path
+or destination sector ahead of time.  Now, you can move sector by sector, and look at every sector.)
+
+Version 2.20 changes
+
+Bug Fixes
+=========
+
+-The nation level tool was apparently not calculating Education and Happiness correctly. Probably it was
+written for an earlier version of the server and never updated. It was updated to match the algorithm used 
+by Empire 4.2.10
+
+Major Enhancements
+==================
+
+-Added a Relations Grid tool to the Diplomacy menu that will show the relations of everybody towards
+everybody in a color coded grid so that you don't have to run the relation command 10 times to get a 
+feel for the current political climate.
+
+
+Minor Enhancements
+==================
+
+-The famine relief tool can now automatically set food thresholds to the required values.
+
+-Popup context menus are a little more context sensitive.  E.g., the "Fire" option is grayed out on non-fort
+sectors, "Radar" is disabled for non-radar sectors, etc.
+
+

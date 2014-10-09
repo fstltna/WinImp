@@ -1,0 +1,143 @@
+Version 1.31 changes
+
+Bug Fixes
+=========
+
+Fixed bug.  Entering thresh from command 
+line did not trigger sector refresh
+
+Fixed bug.  Changes in Move Box sometimes
+cause Deliver Prompt box to generate an
+untrapped error.  
+
+Fixed bug.  Calculate Happy would generate
+an error if Population were 0. 
+
+Fixed bug.  Excess civs over Max Safe Pop
+not shown if sector not producing. (applys
+to mountains only)
+
+Fixed bug.  When setting Territories,
+Red territory borders on map were being
+erased by new sector marker
+
+Fixed bug.  Country names and passwords
+with spaces were not correctly being
+passed to the server by both the
+change prompt box, and at sign-on.  
+(Had to enclose two part names in
+double quotes)
+
+Fixed bug.  When you took the assault
+command from the ship menu, the ship
+number was being put in the unit box.
+Modified code to load the ships in the
+hex in the ship selection box instead.
+
+Fixed bug.  "Look" command was changing
+mountains and sancuaries to wilderness
+on bmap.
+
+Fixed bug. Best Path routine was treating
+delta x,y of 0,2 and 0,-2 as adjacent and
+returning incorrect mobility cost.
+
+Fixed bug.  Version parse was reading
+civ growth rate as integer (getting 2
+instead of 2.5).  This affected all 
+calculated numbers based on civ growth
+(neweff, production, food cost)
+
+Fixed Census spelling (again !)
+
+Fixed bug in telegram display.  With
+saved power reports there was a lot of
+flicker before it was displayed.
+
+Fixed bug.  Color for player 40
+was showing grey (diety color)
+
+Fixed bug.  Reply button not always
+enabled when reviewing telegram.
+
+Fixed bug.  Import telegrams not 
+alway recognizing outgoing telegram 
+headers.
+
+Fixed bug.  Nation Levels Tool now
+formats all output.  Was using 
+sci. notation on decay, looked 
+confusing.
+
+Fixed bug.  0,0 sector displaying before
+main map draw on startup.
+
+Fixed bug.  If telegram database is corrupted,
+program will give a pop-up message instead of
+crashing with error 3022.
+
+Fixed bug.  The march box for the march command
+showed wrong mobility calculation when multiple units
+were selected. 
+
+Fixed bug.  When commands are entered from 
+command window, focus for reply to server 
+query was shifting to map window. 
+
+Fixed bug.  60+% bank not showing packing bonus
+for civ's in mobility calculations.
+
+Fixed bug.  Neweff routines not taking into 
+account hcm requirements for forts.
+
+Fixed bug.  Save telgram routine was activating
+on announcements - could cause database problems.
+
+Fixed bug.  Font sizing routine was running on every
+screen redraw.  Eventually causing quirky memory
+problems.  Set it to run only on Startup, and 
+when Magnification changed.
+
+
+Enhancements
+==================
+
+Splitter bars now available for Main Screen,
+seperates screen into 4 sizable panels. Added map
+and unit box panel maximize buttons.  
+Panel size settings are saved on exit.
+
+Added toolbar.  Added options to turn on 
+and off viewing of toolbar and status bar.
+Moved update buttons to toolbar.
+
+Removed F3 functions, as they are no longer
+used.
+
+Removed Pin Button from unit toolbar, as it
+is no longer used. (Left over from v1.2)
+
+Shoot and Covert boxes now default to the
+number of civs in the sector
+
+Shoot and Start replys no longer in pop
+up box.
+
+Production now take into account stopped
+sectors
+
+Che Marker tool will show where che
+were active at update, and result.
+
+Avoid Starvation on Famine Relief
+tool now works.  Must check starvation
+prior to selecting this option.
+
+Telegram box - header now shows the
+individual(s) you are addressing the
+telegram to.
+
+Load/Unload box will not allow OK unless
+you have selected a ship/land
+
++++ End of File ++++

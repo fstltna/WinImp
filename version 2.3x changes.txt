@@ -1,0 +1,102 @@
+version 2.3.3 changes:
+-added displaying the threshold for F4 Distribution. (Ron Koenderink)
+-added the ability to show the new designation, current designation or both in F4 mode. (Ron Koenderink)
+-added the ability to select graduated display from rsEnemySector tables as well. (Ron Koenderink)
+-added the ability to see the designation when there are units present. (Ron Koenderink)
+-added the ability to see food excesses and shortages together in the F4 - graduated display. (Ron Koenderink)
+-in ParseStrength, moved the sector panel until after the record is updated. (Ron Koenderink)
+-if strength information is not known show "???". (Ron Koenderink)
+-fixed the displaying of the relations output. (Ron Koenderink).
+-added requesting of the relations update when a declare is done from the form. (Ron Koenderink)
+-fixed combo box on the unit grid to show all when All is selected. (Ron Koenderink)
+-added Center Map to the PlaneOther, LandMisc and ShipMisc, centers to first unit.  (Ron Koenderink)
+-added the ability to set the food levels based on food required in Threshold form. (Ron Koenderink)
+-added the ability to do F4 conditional on the EnemySector information. (Ron Koenderink)
+-fixed Null error if strength fields are unknown and F4 condition logic is attempted. (Ron Koenderink)
+-changed to show Attack and Unit menus together on enemy sectors. (Ron Koenderink)
+-fixed a boundary issue with Ship Wakes. (Ron Koenderink)
+-added ShareBmap checks to the determination used for displaying both bmap and enemySect designations.
+Now the enemySect will override sharebmap designations that are just the Country Letter or Country Number. (Ron Koenderink)
+-added unit viewing options.  Also displays individual units type (allied, neutral and enemy) not just the last one
+encountered.  Added shortcut F3 as well. (Ron Koenderink)
+-added a form selecting what is cleared. Removed the questions when breaking santuary.(Ron Koenderink)
+-updated Error routine to point to sourceforge for assistance. (Ron Koenderink)
+-added HourlyActivity report from the analysis of newspaper.  Also added telegram counts to Relations grid from
+analysing the newspaper. (Ron Koenderink)
+-updated the colors on the Units to make them easier to separate and changed the color base. (Ron Koenderink)
+-added an update request when AutoUpdate is turned on.  Update time was not calculated correctly when starting
+with autoupdate off and enable the autoupdate when in the session.  (Ron Koenderink)
+-fixed a parsing look output if there is # in the ship name. (Ron Koenderink)
+-changed the default for shoot to be civilians. (Ron Koenderink)
+-added start and stop to report list to allow access to frmPromptSector form. (Ron Koenderink)
+-display enemy mines in red "?"
+-added the ability to select by Allied/Neutral/Enemy as well for clearing enemy intelligence.
+Added post clear commands (Ron Koenderink)
+-added the status of who is logged in, it is display in the sector panel. (Ron Koenderink)
+ 
+version 2.3.2 changes:
+-fixed run-time error when selecting a sector in the navigation form.
+-fixed the commodity total and MoveAll to blank the quantity when there is no sector information.
+
+version 2.3.1 changes:
+-fixed the save of the threshold labels and values for designate form. (Ron Koenderink)
+-fixed a problem filling the path from the frmPromptPath form for the explore command. (Ron Koenderink)
+-added MOBILIZING and SITZKRIEG relations as Enemy for showing Units. (Ron Koenderink)
+-added some additional checking for before sending telegram, ensure the destination is friend or ally,
+a check if sending all information, and a check if sending sector information to non-ally. (Ron Koenderink)
+-fixed runtime crash with the moving of uw with -/+ logic. (Ron Koenderink)
+-added some safety checks before exporting intelligence using a telegram.  (Ron Koenderink)
+-fixed not being able to select a recon path over a world wraparound. (Ron Koenderink)
+-fixed so the keyboard can be used to select direction in the Path selection form. Also added
+Initial Field selection and focus changes on the return/home/reset buttons. (Ron Koenderink)
+-set the Move key to be the default key for the Move form. (Ron Koenderink)
+-do not export enemy intelligence from rsEnemySect when we own the sector. (Ron Koenderink)
+-delete old enemy units when we get when we own that unit (board or reallocation). (Ron Koenderink)
+-clear Telegram window after removing all the telegrams. (Ron Koenderink)
+-warload now uses a batch to show all command output. (Ron Koenderink)
+-added so update commands are not shown in the command window for Anti command. (Ron Koenderink)
+-fixed strength errors when starting a new game (while in sanutary). (Ron Koenderink)
+-fixed frmPromptSectors to allow single sector selection using the mouse on the map. (Ron Koenderink)
+-rearranged the delivery columns in the distribution delivery tab to support 4 digits plus the direction. (Ron Koenderink)
+-code cleanup was done in the Orders form. (Ron Koenderink)
+-change the relations output to output if request from the command line. (Ron Koenderink)
+-added data field selection to ExportIntelligence, fill the rest if the 'our sector' fields, added header option. (Ron Koenderink)
+-changed the Clear actions to use Yes/No question box. (Ron Koenderink)
+-added displayPath for fly/recon/para/drop/sweep, does not do sector to sector yet. (Ron Koenderink)
+-added Multiple Sector Selection to MoveAll/setresource/setsector/give.  Added -/+ logic to MoveAll. (Ron Koenderink)
+-added -/+ quantity logic to load/unload/lload/lunload. (Ron Koenderink)
+-added Commodity Total Report using the MoveAll and multiple Sector Selection. (Ron Koenderink)
+-added red highlighting when one or more planes exceed their range. (Ron Koenderink)
+-added a suppress option for strength updates. (Ron Koenderink)
+-added protection to not overflow the sec_def and tot_def fields in the database (LOTR II). (Ron Koenderink)
+
+version 2.3.0 changes:
+-changed the prompt form for follow to exit the form when the OK button is pressed. (Ron Koenderink)
+-added three territory fields to the sector display, moved the strength fields to the right side. (Ron Koenderink)
+-added territory field selection the territory prompt form and added to PromtSector form. (Ron Koenderink)
+-added +/- logic to quantity in the Move form. (Ron Koenderink)
+-added sector counts for MultipleSectorSelection in the Move/Deliver/Designate/Threshold command . (Ron Koenderink)
+-added sector description to the threshold form. (Ron Koenderink)
+-fixed short buttons on Build Tool. (Ron Koenderink)
+-added Shift F9 to move forward in the command list. (Ron Koenderink)
+-set the initial field selection to the sector for Production Summary report.  (Ron Koenderink)
+-enable the report selection for Production Summary report. (Ron Koenderink)
+-changed "ETU per undate" to "ETU per update" - code cleanup. (Ron Koenderink)
+-allow spying for multiple sectors and fixed update requests for spying. (Ron Koenderink)
+-added database updates to sail/unsail to get the UnitGrid to update
+-fixed parsing of sorder for the 'has arrived', server has no space between End Sector and 'has arrived', also
+fixed and added 'no route possible' and 'route too long' as the same time. (Ron Koenderink)
+-fixed unable to access database when file name (egp) is changed to UCase because copying files between machines. (Ron Koenderink)
+-modified export ExportNation/edit command to work with syntax supported next version of the server. (Ron Koenderink)
+-added detection in ProcessDump for when grid update is required and only update when required. (Ron Koenderink)
+-fixed FleetAdd so when a fleet is selected using the combo box, Okay button is enabled. (Ron Koenderink)
+-modified dumps to always fill in the country field with our country number when not in Deity mode. (Ron Koenderink)
+-added bridge spans and bridge towers to ExportNation. (Ron Koenderink)
+-modified ImportIntelligence to not imports record about ourselves. (Ron Koenderink)
+-added Keys for moving about on the map (only active from the map). (Ron Koenderink)
+-added Friendly Plane GIF, Neutral Plane GIF and Neutral Land Unit GIF. (Ron Koenderink)
+-fixed sending telegram with lines longer then 1022 bytes, still appends a VbLF but does not lose characters. (Ron Koenderink)
+-fixed the parsing of the spy output to capture the Plane output. (Ron Koenderink)
+-added food required and food shortage to F4 - graduated display. (Ron Koenderink)
+-change processing of relations to always fill Nations object information not just from database update. (Ron Koenderink)
+-fixed the parsing of sorder on a sector not to give an error. (Ron Koenderink)

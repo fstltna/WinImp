@@ -1,0 +1,411 @@
+Version 1.3 changes
+
+Note - These are changes from 1.2  Some of
+these changes made it into Version 1.21
+
+Fixed bug.  WorldX, WorldY were not
+always being set from the version record 
+when program started. Resulted in crash 
+with Error 380
+
+Fixed bug.  Parsing error generated on
+land units when windows country settings
+are such that a comma is used as decimal
+separator (French).  Forced code to always
+use period as decimal separator, regardless
+of Windows country settings. 
+
+Fixed bug.  Clicking a selection button
+on the unit toolbar when there are no 
+units in the box caused a crash.
+
+Fixed bug.  Telegram box allowed hitting reply
+with no message chosen.  Caused crash
+
+Fixed bug.  Changing country setting in
+Windows could cause Magnification entry 
+in the registry to become invalid if 
+the decimal symbol changed.  Put a check
+in to fix invalid magnification entries.
+Similar check put in for the command 
+box height setting
+
+Fixed bug.  Not picking up max land efficiency
+gain from version report.  No effect on client
+prior to version 1.3
+
+Fixed bug.  Launch command not updating
+plane positions (needed for satellites)
+
+Fixed bug.  Country number not being 
+picked up on program entry.  This caused 
+recon and sat to incorrectly mark its own
+units as enemies.
+
+Added code to save fertility and oil 
+ratings of sea sectors from view of
+fishing boats/oil derricks, etc. to the
+local database.  These values are 
+displayed in the sea hexes when
+a Graduated Color Scheme based on fert or
+ocontent is used.
+
+Added code to script editor so that lines
+with a & in front would be taken as 
+responses to server queries.
+
+Modified explore circle command to act
+more like nova - i.e. it will request a 
+wider map and keep going up to the radius
+specified.  Added check not to abandon the
+sector
+
+Reading the version report now updates the
+version variables, including worldx, worldy.
+
+Winace now dumps a nation command on entry
+and after updates.  Gets the tech, education,
+research, reserves and other figures.
+
+Build box now only shows units available at
+your current tech level.
+
+Added option to change the font of the command 
+display window (Alt F) on the map screen.
+
+When navigating using fleet designations,
+WinACE will now check to see if it needs 
+to update land and air positions also
+
+Fixed bug.  Telegram timestamping now
+takes into account client being in a 
+different time zone than server.
+
+Updated Transport prompt box to allow
+use of waypoints, similar to move.  Just
+press the space bar when the cursor is 
+in the destination text box.
+
+Added torpedo sighted to Event Markers
+from incoming bulletins.
+
+Added update player list to view menu.
+
+Had mouse move check to see if the sector
+had changed before updating status box. 
+Reduced flicker.
+
+Re-wrote screen draw routines to optimize
+some critical loops and speed up drawing.
+Resulted in minor improvement in refresh rate.
+
+Added bridge towers to the build dialog box
+
+Automatic subsetting on unit display.  When
+paradroping, only "transport" units show up in
+unit box, etc.
+
+
+++++++++++++++
+New Features +
+++++++++++++++
+
+Best Path/Mobility Cost
+========================
+March/Nav, Transport, and Move dialog
+boxes will now compute mobility cost
+of projected moves.  Option to graphically
+show "best path" as well.
+
+
+Unit Display Box now part of Sector Box
+========================================
+Separate Unit Display that would pop up and
+down is now a third tab on the Sector Display
+Box.  Box is automatically switched to that
+tab when units are needed.  
+
+
+Sector Box Census Display has 5 new fields
+=========================================
+FR - Food required - This is the food required
+to feed the population of the sector AND insure
+maximum growth.  It does not take into account
+any that could be grown and harvested in the
+sector, so it is a conservative number, usually
+larger than the "prevent starvation" requirement.
+If there is less food than required in the sector,
+this number will show up in red.  This number is
+still calculated for blitz games, but can be 
+ignored.
+
+Pd - Production.  Shows how much the sector will
+produce at the update (you should know what it produces)
+based on the workforce and the resource limits.
+Harbors, airports, and headquarters show avail.
+Does not consider that if you starve people you will
+not get full production.  It assumes you have 
+provided enough food for full population growth.
+
+Mx - Maximum Production.  The max that could be
+produced based on the workforce currently in the
+hex if all the raw materials needed were present.
+
+Civ - Excess or Shortage of Civs.  If there are 
+more civs in a hex than needed to bring the hex
+to 100% and convert all the raw materials, the
+excess is shown here in black.  If more civs 
+are needed to process all the raw materials 
+available, the shortage is shown here in red.
+Note that harbors, airports, headquarters, and 
+mines can always use more civs, up to MAX SAFE 
+POP (768 in most 60 ETU games) so if they are
+below that number, the difference will show
+in red.   Warehouses, radar, bridges, etc
+will show everyone but one in black once
+they are 100%, since they don't need a staff.
+
+NE - New efficiency.  The efficiency of the hex
+after the next update.  Does not take into account
+BIG_CITIES
+
+Note - the above fields are only valid when
+connected to a game, and the "nation" values are 
+known.  They are not correct when playing off line.
+
+
+Pop up menus organized into sub menus
+=====================================
+Soon as you left click you will see this one.
+Figure it will raise some controversy, but I
+kind of like it.  Main need is to identify 
+common commands that should be on the first
+level of each menu.
+
+
+Prompt box changes
+=====================================
+A few changes to make the prompt boxes 
+easier to use.
+
+1) Move box now only shows the items
+   actually in the sector.  There is
+   a display all check box in case you
+   want to build scripts or run "what ifs"
+
+2) Cursor does not have to be on the 
+   destination/target box to have it 
+   filled in when a sector on the map
+   is clicked.  This saves an extra
+   click back on the prompt.  True for 
+   Move, Launch, Transport, March, and Nav.
+
+3) Left clicking on the map when a prompt
+   box is up is the same as pressing the
+   "execute" button on the box.  This saves
+   having to move the mouse back down to the
+   OK button after clicking on a sector on the
+   Map.
+
+This means to move something, you can now
+left click to bring up the box, click on the
+item from a shorter list, type in the amount,
+right click then left click on the destination, 
+sector to fill it in the box and execute the move.
+
+
+Build Projection Tool
+=====================
+Click on a harbor, airport, or headquarters
+and then choose this tool.  It will bring up
+a projection of how your ships/planes/units 
+will increase in efficiency in that sector at
+the update, including showing you where your
+short.  You can change the starting amounts
+of materials to project "what if" figures.
+You can even "add" units by using the build
+queue, which shows you the effect of building
+new units without your having to actually
+start them.
+
+This tool will have to be updated when wolfpack
+introduces the new changes where guns are
+no longer required to build units.
+
+Best/Average/Worst Case - when building a unit,
+empire does not use fractions of a materials.  
+Instead, there is a % chance that either zero or
+one unit is used.  (Example - if a linf needs 1
+gun to be built, and its going from 30 - 100 %, 
+then it needs .7 guns.   This translates into
+a 70% chance it will use 1 gun, and a 30% chance
+it will use 0.)
+
+Lets say your bringing 10 linf up from 30%-100%
+
+if you choose best case, the build projector will
+assume you always make the 30% chance, and thus use
+no guns.  This is a "best you can get" for when
+you are short on materials and need to know how much
+cash could be spent.
+
+if you assume worst case, the build projector will
+assume you always miss the 30% chance, and thus use
+10 guns.  Making sure you have enough materials to 
+cover worst case will insure all your units fully
+build, regardless of how the odds play out.
+
+if you assume average case, then it will try to 
+balance things out, and you will use ABOUT 7 guns.
+
+
+Famine Relief Tool
+==================
+This is an auto feed tool that will feed starving
+populations from a food source hex semi
+automatically.  It projects how much food and
+mob will be used in the process, so it takes
+a few seconds to run the calcs.   Currently it
+works only on the FR figure calculated by WinACE.
+I intend to enhance it to work just the starvation
+levels if that’s all that’s desired, but I need a 
+long term game to finish developing that option.
+
+Range specifies the maximum distance it will 
+distribute the food.  Food and mob specify how
+much food/mob must be left in the hex after
+distribution is done.  If numbers show red 
+in the grid, it means the source site does
+not have enough food or mob to reach that
+sector.  You can change the distribution order
+by clicking on the top of the columns so that
+it goes by shortest path or shortest mob cost
+first if you want it that way.
+
+
+Nation Levels Tool
+==================
+This is a fairly easy to understand tool.  It
+predicts your nation levels as of the next update
+(Education, Tech, Happiness, Research).  You can
+project out multiple turns if you want.
+You also can play what if scenarios 
+
+(Example:  If I put 100 more lcms in the
+library, what will my edu be next turn ?)
+
+Only thing not predicted is tech/research bleed.
+You have to fill the estimate for that in yourself.
+
+
+Attack Menu Changes
+===================
+Several new options have been added to the 
+attack menu
+
+1) Probe - This does a "fake" attack, committing 
+   no troops, but showing you what’s in the sector.
+   Does not update the enemy data base at this time.
+
+2) Attack - Pulls up the attack prompt box.
+
+3) Assault - Pulls up the assault prompt box
+
+4) Bomb - Pulls up the bomb prompt box, with the
+   target sector already put in.  The unit box
+   will show only bombers that are in range of the
+   target, along with their range to target in red.
+
+5) Bomb - Pulls up the paradrop prompt box, with the
+   target sector already put in.  The unit box
+   will show only transports that are in range of the
+   target, along with their range to target in red.
+
+6) Missile Strike - Pulls up the launch box, with the
+   target sector already put in.  The unit box
+   will show only missiles that are in range of the
+   target, along with their range to target in red.
+
+
+Attack Prompt Box Changes
+=========================
+This box has been enhanced to let you choose the
+answers to the common attack questions quickly 
+ahead of time.
+
+1)   Support - clicking on the support box itself will
+     cancel/call for full support.  You can turn off/on
+     an individual option by clicking it separately
+
+2)   Attack Force - The top three options allow you to
+     control the amount of mil committed to the attack.
+     Leaving the option on the default of Prompt will
+     mean you are prompted sector by sector by the server
+     as normal.  Choosing "All" means that all available
+     mil will be used in the attack (WinACE auto answers 
+     the servers prompts)  The third option allows you
+     to specify exactly how many mil will participate 
+     in the attack.  If you say you want x mil, then
+     WinACE again answers all the prompts, committing
+     the first x mil the server asks about. 
+
+3)   Attacking Units - When this prompt comes up, the
+     Unit box will show only the units in range to 
+     participate in the attack.  If you leave the 
+     unit box blank, then you will be prompted unit
+     by unit as normal.  If you enter one or more
+     unit numbers here by clicking on the units in
+     the unit box, then WinACE will auto answer
+     the unit prompts, committing only the units you
+     indicated.  A Y or N in this box will commit
+     all or none of the available units, and the Y
+     and N buttons are available to allow you to 
+     quickly choose these options.
+
+4)   The Move in section is similar to the attack force,
+     but it controls the number of military that will
+     occupy the sector after your victory.  The only
+     new option here is "1", in case you just want the
+     bare minimum needed to hold the hex.  The unit
+     box in this section controls which units will
+     move in after the attack.
+
+
+Assault Prompt Box Changes
+=========================
+This box has been enhanced to let you select ships
+and the assault force quickly. 
+
+
+1)   Support - Similar to the attack box above, 
+     clicking on the support box itself will
+     cancel/call for full support.  You can turn off/on
+     an individual option by clicking it separately
+
+2)   Ship select - the ship select will show the ships
+     in range to assault, along with the approximate
+     assault strength of each ship (taking into account
+     mil and units).  These numbers assume the assault
+     is contested, since a full ships complement can
+     be landed on an uncontested beach.  The ship with 
+     the highest assault strength is automatically 
+     selected. You can select a different ship or enter 
+     a ship number of your own.  
+
+3)   Attack Force - This is the same as in the attack
+     box, so read the explanation there.
+
+3)   Attacking Units.  The list box to the right of 
+     the assault prompt box shows the units on the 
+     selected ship that can assault.
+     Click on units in the list box to select/deselect
+     them, rather than using the units box.
+     Other than that, this box performs the same as 
+     the Attacking Units box in the attack command.
+
+Note that the Assault box does not have any options 
+to allow you to select the occupying force, since 
+everyone who participated in the assault automatically
+goes ashore.
+
++++ End of File ++++

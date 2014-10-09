@@ -1,0 +1,225 @@
+version 2.4.28 changes: (Ron Koenderink)
+-added clearing the sea database when doing a break command.
+-improved error handling for XmlRpc.
+-fixed build menu to be enabled for 'n' sectors.
+-fixed the Commodities combo box in Bomb to default to military.
+-changed HideUnits in F4 - graduated display to be saved across sessions and F4 calls
+-fixed xdump land/ship chr to deal with the server change to remove I_NONE.
+-added Added maxpop to xdump chr sect parsing.
+-fixed Current Time parsing because of a server change in 4.2.22.
+-changed Get Oil Content to only nav ships with oil capability.
+-fixed Scripts buttons crashing when there invalid image name.
+-changed remaining locations where avail was calculated instead of taken
+from the server output.
+-fixed the displaying enemy intelligence only sectors.
+
+version 2.4.26 changes: (Ron Koenderink)
+-added http firewall access to WinACE.
+-added option to automatically update oil content every update or a nav.
+-added ability Clear Intelligence for a sector
+-added air defense strength in F4 - conditional and graduated displays.
+-fix deity mode for mobility cost - changed scaling to 100 commodity.
+-suppress blank lines for internal changes.
+-suppress C_INFORM messages.
+-added an option to suppress telegram arrival for the command window.
+-added an option to suppress update command display in the command window.
+-added xdump to commands to be skipped when recording a script file.
+-fixed Range Tool to deal with empty build table.
+-added EE9 Theme Game which removed the 999 material production limit.
+-added option to suppress the unit shelling reports.
+-move Exit to the bottom of the File menu.
+
+version 2.4.24 changes: (Ron Koenderink)
+-added a combo box for selecting updates for NavMarkers.
+-added checkbox for control the limiting of mobility gain in NavMarkers.
+-filled out the production summary report
+-added a socket close if the socket is closing before waiting for the user
+decide whether stop, retry or go offline.
+-added configurability custom script buttons up to 10.
+-added the ability control the visibility for toolbar buttons.
+-added color lengths for telegrams, warning, soft limit and hard limit.
+-accomodate the change of mobquota field/selector to mquota in 4.2.21.
+-fixed ship mobility costs to deal with SWEEP capabilities.
+-fixed ship name to deal with # in the name.
+-added @sector parsing in the telegram frame in main form.
+-added the commodity ratios in the sector panel, controlled by an option.
+-fixed the bmp function in File -> Print to create bmp file called
+"print_map.bmp" in the current directory instead of fixed debugging directory.
+-fixed list sanctuaries.
+
+version 2.4.22 changes: (Ron Koenderink)
+-fixed file redirection for xdump.
+-set UTF8 mode on the server when the UTF8 option is changed or loaded.
+UTF8 is only active in 4.2.21 version or newer.
+-delay sending the update commands by 10 seconds to avoid being aborted.
+-changed to accomodate deity read's syntax changing in 4.2.21.
+-fixed navmarkers to deal with SWEEP capabilities.
+-continuing to improve CopyGameDB function.
+-enhanced FLASH/BROADCAST error handling to deal with empire hub flashes.
+-changed the cmbSub to store Nations instead of Fleets for deity mode.
+-fixed the unit filter for enemy to work with country #s greater then 10.
+-added to "Add Update Avail" checkbox to the "Use Current Avail".
+This can be used to estimate the production for this and the next update.
+-changed the cmbSub store Nations instead of Fleets for deity mode.
+-fixed the unit filter for enemy to work with country #s greater then 10.
+
+version 2.4.20 changes: (Ron Koenderink)
+-changed the default for spy/look/llook/coastwatch to off.
+-fixed scuttle to show tradeship results.
+-continuing to improve CopyGameDB function.
+-added the ability start at your capital instead of 0,0.
+-fixed the overflowing of the command buffer (CopyGameDB).
+-added new function for PrintMaps (experimental).
+
+version 2.4.18 changes: (Ron Koenderink)
+-fixed strength update for Deity mode to request for only non-sea sectors,
+when the suppressing dump sea sectors option is turned on.
+-always save telegrams, unless it is a duplicate.
+-added 2K4 changes (disabled civs on explore, explore with mil for bridge spans and towers,
+fixed enlist to not required civs, load land units on land units).
+-fixed the delivery:radius capability to show in delivery colorscheme.
+-fixed the F4 Delivery ColorScheme to use the correct colors.
+-added Simple Territory Form
+-fixed the F4 Current/New/Both to save the between F4 selection and between sessions.
+-fixed the crash if you select Tool Build - Build sub form without any units.
+
+version 2.4.16 changes: (Ron Koenderink)
+-changed interface to WinEmpireHub to be more compatable with EmpireHub.
+-added deity parsing to EventStarvationNotice function.
+-added motd to the telegram window for deity mode.
+-added Satellite Route Calculator.
+-added Nuclear Damage Display Mode.
+-fixed satellite report to deal with satellite detecting a changed owner.
+-added the ability to suppress sea sectors for deities dumps.
+-clear any enemy sect intelligence if a sector is turned into a wasteland
+-fixed the deity mode to show countries in their colors in ColorScheme NORMAL.
+-added Number of days to clear function for sectors and units but AirCombat.
+-added Expired Unit to enemy Unit display.
+-added StarWars II changes: added oil production for swamps, added deliver radius to del. tab.
+-removed StarWars I changes
+-fixed the mobility cost for mobility cost equal to 25 or greater.
+-fixed the explore path (double click) to select the take path option when returning from the Path form.
+-added a token exchange for coordinating commands through WinEmpireHub.
+
+version 2.4.12 changes: (Ron Koenderink)
+-fixed to CopyGameDatabase to create planes and land units.
+-fixed ImportIntelligence to correctly skip our sectors.
+-fixed Offline mode so it knows what it's NationNumber is.
+-fixed run-time error drawing NavMarkers.
+-added the ability to include Update mobility and efficiency in NavMarkers.
+-added the remaining fields from the range tool to calculated fields in the UnitGrid.
+-fixed the column width for enemy timestamp in UnitGrid.
+-added the ability to save the telegram/server window to the log or file.
+-added a center map function if you right click on a sector address in the telegram/server output window.
+-fixed run-time crash if deleting an unit enemy by selecting the whole grid or including the total line.
+-added the ability to include update efficiency and mobility gains in the NavMarkers.
+-added chat window for WinEmpireHub for chat window.
+-added processing DUMPS when in WinEmpireHub mode.
+-added flash chat window for flash messages.
+-filling the unit description for AddUnit description with a default from the server information.
+-fixed the NavMarkers to use the Bmap for harbour check instead of dump information and remove the efficiency check.
+-added Display Path to Bomb form, enhanced DisplayPath to show sector to sector info for planes. 
+-added Plague Marking to CheTool.
+
+version 2.4.10 changes: (Ron Koenderink)
+-fixed id column in UnitGrid to sort numerically instead by text.
+-fixed display of the units on the map when units are excluded.
+-fixed display of dual designation, it was showing enemy sector designation and sector designation.
+-fixed display of distribution and delivery values.
+-in the F4 Color scheme, added Esc code for Cancel button, make OK the default, changed Apply to OK
+-fixed the EventMarkers when you deselect a sector.
+-added the ability to shift origin in database without submitting origin command to server.
+-fixed missing initialization for tz (TimeZone), corrects the displaying of timestamp for enemy information.
+-fixed BROADCAST, also combined title and text on to one line.
+
+version 2.4.8 changes: (Ron Koenderink)
+-added more colors to BuildTool - max eff Green, 100% blue.
+-moved Copy Game Database to a separate form, Added nation to Copy Game Database,
+added dist, deliver and terr to sectors, fixed units to work with server 4.2.13.
+-removed the 999 worker avail so the production report matches the server.  Note, there is rounding error
+Production report in servers older then 4.2.15.
+-added excess civilians to the graduated and conditional color schemes.
+-fill in simulated build into the label below the production grid in the Build Tool.
+-switched "Left:" to show Not Used: if "Left:" is empty in the Build Tool.
+-fixed up "ns" option for assault and attack.
+-added all sectors option to Commodity Total using a star.
+-fixed run time error in processing sector damage from dropping nukes.
+-added the actual firing range column to ships and lands in the unit grids.
+-added enlist center to the estimate tool.
+
+version 2.4.6 changes: (Ron Koenderink)
+-fixed selecting mobility in F4 graduated and including enemysector causes an crash.
+-added (Production) Estimate Tool from Jim's original code.
+-fixed default selection of commodities for delivery form.
+-fixed BuildTool so if the build list is empty, do not attempt a build command,
+saving generating a server problem.
+-added Green color if the unit will be at max. eff. gain but not 100% in the BuildTool
+-detect running out of BTU's and logout and back in.
+-fixed ListSanctuary if it is not a blitz, command sanc not found.
+-trap illegal commands, print error message and continue.
+-fixed runtime error when updating the BMap with an empty table.
+-added the ability to use rollover_avail limit and with and without sector efficiency scale.
+-scaled the as field to 1.5 times the defender military in assault and attack.
+-fixed using the graduated display with strength fields.
+-updated the help files to 4.2.14 server.
+
+version 2.4.4 changes: (Ron Koenderink)
+-fixed Mob., Work. and Avail. for setsector, changed to lower case letters.
+-fixed import intelligence to show bridges and bridgeheads.
+-add the ability to parse sonar from the navigation form.
+-fixed regional settings loading.
+-switch intelligence to use UTC.
+-fixed crash when selecting a sector while building bridge span.
+-changed build bridge span/tower to determine direction to build from sector selection on the map.
+-added Check for St@r W@rs space travel (flying through space)
+-fixed the grid selection to pass unit id to form when the row is not actually selected
+-fixed a crash in Range tool if you enter a tech level higher then 450.
+-fixed ExportIntelligence to deal with null Enemy Sector designation.
+-fixed Air Combat to deal country names longer than 10 characters.
+-change ParseLook to use the implied knowledge to zero either military or civilians.
+-delete blank row in Build Tool if there is no efficiency gain.
+-fixed Build Tool to accomodate large avail requirements from St@r W@rs.
+
+
+version 2.4.2 changes:
+-added background image to map (Options->Viewing). (Ron Koenderink)
+-added Border Color to options (Options->Viewing). (Ron Koenderink)
+-added the bridges to the transparent mode. (Ron Koenderink)
+-fixed the parsing for ship names with spaces in sdump. (Ron Koenderink)
+-fixed the parsing for ship names in orders. (Ron Koenderink)
+-fixed the parsing for ship names with # in missions. (Ron Koenderink)
+-added show sect c/b to new game startup. (Ron Koenderink)
+-added search to the help file. (Ron Koenderink)
+-updated the readme file. (Ron Koenderink)
+-removed the StarryBG.jpg file from the build. (Ron Koenderink)
+
+version 2.4.1 changes:
+-added empire info pages (4.2.13) to the help file. (Ron Koenderink)
+-added EmpData.mdb back into installation file. (Ron Koenderink)
+
+version 2.4.0 changes:
+-code cleanup (changed hldindex to hldIndex). (Ron Koenderink)
+-skip an invalid llook or look command (Usage comes up). (Ron Koenderink)
+-added shortcuts for zoom keys Ctrl+F11, Ctrl+F12. (Ron Koenderink)
+-fixed ParseReconReport for when a intercepting plane aborts. (Ron Koenderink)
+-fixed relations to show in a report when selected from the menu. (Ron Koenderink)
+-fixed relations grid titles in Deity mode. (Ron Koenderink)
+-added closing bracket to display of newdes in Deity mode. (Ron Koenderink)
+-added the ability to include the headers in the dump output.  Controlling by option in Viewing Tab. (Ron Koenderink)
+-added show item to show reports. (Ron Koenderink)
+-fixed a crash when sorting on code in the show sector capability report. (Ron Koenderink)
+-fixed a parsing relations if not all relations was in one packet (Empire Hub). (Ron Koenderink)
+-added a check for Diplomatic Relations title to prevent crash with invalid syntax in relations command "rela *". (Ron Koenderink)
+-added a Plague Risk scaled by 10 and added truncation for both of the plague risks. (Ron Koenderink)
+-separated Unit number as separate column in the unit grid. (Ron Koenderink)
+-fixed explore ?(help) button. (Ron Koenderink)
+-fixed currentRecord error if the last nuke is removed from the nuke list and lost entry is processed. (Ron Koenderink)
+-fixed Parsing an relations change during a np recon. (Ron Koenderink)
+-add Multiple Sector selection for ThresholdAll, double click functionality. (Ron Koenderink)
+-adding local help capabilities. (Ron Koenderink)
+-adding St@r W@rs specific changes. (Ron Koenderink)
+-default commodity selection for deliver based on the current/new/both parameter from F4 mode. (Ron Koenderink)
+-when selecting population, do not change the path option to radius. (Ron Koenderink)
+-fill in the graduated display with a default item (prevents errors). (Ron Koenderink)
+-set the default color for Delivery modes for new installation. (Ron Koenderink)
+-fixed showing two sector count for strength report, user requested. (Ron Koenderink)

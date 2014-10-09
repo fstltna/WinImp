@@ -1,0 +1,322 @@
+version 2.5.70 changes: (Ron Koenderink)
+-Added max_idle_visitor and login_grace_time to Version parsing,
+new for 4.3.30
+
+version 2.5.68 changes: (Ron Koenderink)
+-Fix regional problems with Telegrams
+-fixed the relations to use xdump nation-relationship,
+solves problem with slow_war being removed from the server in
+4.3.27.
+
+version 2.5.66 changes: (Ron Koenderink)
+-show popup for nav errors only when the navigate form is used.
+-fix attack/assault support to use y/n instead 1/0
+
+version 2.5.64 changes: (Ron Koenderink)
+-fixed the parsing of show sect s
+-fixed the production for enlistment centers
+-do not include stopped units in the production summary.
+-added maint for 4.3.23 SectorChr
+
+version 2.5.62 changes: (Ron Koenderink)
+-fixed an error when parsing xdump planes
+-added timeused for server 4.3.19.
+-added to RAILWAY option (use to be part of Heavy Metal)
+-added down for game information parsing.
+-added Terrain logic to sector designation part of server 4.3.19.
+-allow assault of the sector when in it (new in server 4.3.19).
+
+version 2.5.60 changes: (Ron Koenderink)
+-fixed the parsing of show sect c (new format in 4.3.16)
+-fixed food mobility costs, not properly storing the Items
+characteristics, affects all items.
+-fixed ApplySectorDamage when the enemy efficiency is not unknown, fixes
+Invalid use of Null errors when shelling.
+-added navigation of ships under bridges that you do not own.
+-fixed Excess Civ (overflow) bug for Big Cities in the production summary
+report.
+-added for Lost items for navigate, march, assault and attack.
+-fixed Escape disconnecting the session, now it sends a 'aborted' instead.
+-trap interdiction and errors from nav and march and results to user.
+
+version 2.5.58 changes; (Ron Koenderink)
+-allow unloading of land units on trains for Heavy Metal II
+-fixed the packing factor for mobility calcuations
+-fixed a Data Conversion crash in ParseAndDeleteUnits,
+the crash occurred when deleting units that were blown up
+during an attack.
+
+version 2.5.56 changes: (Ron Koenderink)
+-added FS (food shortage) to the F4 Conditional
+-added sector total to CommodityTotal
+-fixed production to not need max civ when not producing any product
+-delete enemy unit when it is blown up
+-added Build Cost to F4 graduated and conditional
+-fixed Cities for the Production and Production Summary Report
+-allow loading of land units on trains for Heavy Metal II
+-allow plains designation for Heavy Metal II
+
+version 2.5.54 changes: (Ron Koenderink)
+-fixed production to use depletion rate from sect configuration
+
+version 2.5.52 changes: (Ron Koenderink)
+-allow ~ (plains) to produce either oil or food
+
+version 2.5.50 changes: (Ron Koenderink)
+-added assault in the same sector for HeavyMetal II
+-added biofuel plant to production and production summary
+
+version 2.5.48 changes: (Ron Koenderink)
+-cleaned up a number of unused local variables.
+-added terrian for 4.3.12 SectorChr
+-added maxnoc for 4.3.13 Version
+-fixed to version to show in report form when selecting
+from menu or toolbar (broken 2.5.46).
+
+version 2.5.46 changes: (Ron Koenderink)
+-fixed "Fire Range"/fire_range_factor.
+-allow empty responses from XmlRpc server.
+-fixed the error response handler XmlRpc server.
+-use for xdump ver for 4.3.10 servers and newer for version button.
+-allow for spaces in the login name.
+-added option to allow configuration of the maximum path length.
+-mark sectors that are now fully ours in yellow
+-filter the load/unload/lload/lunload commands to relevant units only.
+-fix the ship's order data when loading from 4.3.X servers.
+-update the order form when data is changed.
+-fix the sending of the telegrams to deity instead of correct location.
+-increase the size of the condition list of items (F4) to
+prevent the list from being cut off.
+-add elev to the sector table and is avail in the F4 conditions
+and graduation (deity only).
+
+version 2.5.44 changes: (Ron Koenderink)
+-fixed the country names with spaces when parsing bulletins.
+
+version 2.5.42 changes: (Ron Koenderink)
+-fixed the starting of a new game, missing "AddNew",
+broken in 2.5.40.
+-only request meta entries for updates and game for servers 4.3.10.
+-removed Windows Internet Control references, should prevent
+problems with installing on XP with IE7.
+
+version 2.5.40 changes: (Ron Koenderink)
+-Added new xdump files for Serer 4.3.10.
+-Switched to xdump update and xdump game to calculate
+update timer for server 4.3.10.  Update will be removed in
+a future server version.  Created a new database field to
+store Time Zone Adjustment as part of the update changes.
+-Fixed a crash when doing 'show product t' command.
+
+version 2.5.38 changes: (Ron Koenderink)
+-Fixed oil production for plains sector.
+-Added Production(PD) to conditional and graduated F4.
+-Fixed Reacting Planes when no missions are present.
+-Fixed the New Efficiency calculation.
+-Added a blue color on the Max Production to show that max.
+is limited by material not max. avail.
+-Added a forward option for the Telegram Window.
+-Updated the telegram window options.
+-Fixed Chat window to remember the All/User setting across
+form activations.  The default for Flash is User. The default
+from Chat is All.
+-Removed the RolloverAvail scaling by sector efficiency option.
+-Added nav command to Land and Plane update lists for command
+window entries when AutoUpdate is enabled.
+-Do not automatically select bridge tower when bridge span is available.
+-Fixed CopyGameDB to deal Land Unit counts and Plane Counts for
+servers 4.3.6 or greater.
+-Fixed rollover avail calculations for Build tool.
+-Delete enemy intelligence when we own the sector.
+
+version 2.5.36 changes: (Ron Koenderink)
+-re-enable Update Avail and disable Current Avail for server
+4.3.6 or greater.  Correction from 2.5.32.
+
+version 2.5.34 changes: (Ron Koenderink)
+-change AUTO_POWER from a game option for Heavy Metal to standard option.
+-added SECT_MOB_ACCESS, UNIT_MOB_ACCESS and unit_mob_neg_factor
+options for server 3.4.10.
+
+version 2.5.32 changes: (Ron Koenderink)
+-correct ProdSummaryReport to not show shortages
+of lcms (bug from SP Atlantis).
+-added Import/Export of Sea information
+-fixed shifting origin for intelligence information
+-added Text to Speech capability, new option tab.
+-fixed the loading of the units to deal old units from
+enemy intelligence.
+-fixed the updating of the land units on ship when the
+ship moves.
+-removed stopped units from appearing in the build tool.
+-fixed automatic viewing for navigating, prevent double 'h' and
+allow ship update to work.
+-removed AutoView for march.
+-removed the unit list except for start and stop commands.
+-fixed "wing" for server 4.3.7 or newer.
+-fixed fort fire range to apply the bonus after scaling with
+version fort firing range instead before the scaling.
+-fixed xdump to packing factor for sectors, this fixes the
+mobility divide zero bug that occurs after clearing show information for
+4.3.X servers.
+-automatically detect the change to XDump capable server and
+request the meta tables.  Fixes invalid Item row.
+-fixed xdump parsing for version and sector characteristics
+for different regions.
+-fixed command line torpedo to request a ship update instead
+of land update.
+-added an option to show short names in the Unit grid.
+-corrected spelling on Average on the Build tool.
+-removed Update Avail for server 4.3.6 or greater in the Build tool.
+
+version 2.5.30 changes: (Ron Koenderink)
+-fixed production showing twice real production at low tech
+levels for 4.3.X servers.
+-add support for xdump for WinEmpireHub for 4.3.X servers.
+
+version 2.5.28 changes: (Ron Koenderink)
+-fixed xdump plane-chr incorrectly show ASW capabilty.
+-fixed FillGridItem, it was showing one too many rows.
+-add some support RAILWAYS in HeavyMetal theme game,
+done with the adjacent sectors.
+-add AUTO_POWER for HeavyMetal theme game.
+-fixed the ship RFR (real firing range) for 4.3.X servers.
+-added AutoView for navigate and march.
+
+version 2.5.26 changes: (Ron Koenderink)
+-increase width for the timestamp field for Enemy grid.
+-add support for navigation infrastructure for mobility cost
+for SP: Atlantis.
+-do not enter mine fields when calculating mobility costs
+pre 4.3.6 servers.
+-add support start for units for 4.3.6 server.
+-add nuke unit icon to main map.
+-do not explore into sea sectors with known minefields.
+-do not erase minefields when flying over them or from bulletins.
+-accomodate the changes to show sect s for 4.3.6 servers.
+-add support for HeavyMetal as a Theme game, more to come.
+
+version 2.5.24 changes: (Ron Koenderink)
+-fixed missions for 4.3.X servers.
+-some more conversion to xdump meta data.
+-added support for new mobility calculations in 4.3.6 servers.
+-added support for enable field for infrastructure in 4.3.6 servers.
+-added support plane and nuke transport costs for 4.3.6 servers.
+-added Theme Game control in game login window,
+duplicate of the option Theme Game tab.
+-fixed maximum percentage for SP: Atlantis fields.
+
+version 2.5.22 changes: (Ron Koenderink)
+-added double click to move map for Unit Grid.
+-fixed a bug with sailing order results in production report.
+The second part of the production report was being lost.
+-added support for product efficiency changes for 4.3.6.
+-added support for off for units, part of the new budgeting
+functions for 4.3.6.
+-fixed a problem where the Unit Text List in Unit grid would not show.
+Not able to requery against a table, only works for the queries.
+-fixed the break command to request the meta data before requesting
+any tables.
+-fixed bomb/fly/recon to have an title on the report.
+-enhanced custom script buttons to support jump points.
+-fixed radar and fire menus to check sector fields for SP:Atlantis.
+-change toolbar button for bmap not to erase all the map information.
+for SP:Atlantis.
+
+version 2.5.20 changes: (Ron Koenderink)
+-added timestamps to units and sector tables.
+-added timestamp checks to xdump lost parsing.
+-added keyboard shortcuts to the jump points.
+(you must first click the map once)
+
+version 2.5.18 changes: (Ron Keonderink)
+-fixed MaxPopulation for SP: Atlantis
+-added four new infrastructures for SP: Atlantis
+using runway->min, radar->gold, fort->fert, navigate->ocontent.
+-increased the size of civilians to 5 and exceed civilans to 4.
+-added relations command for 4.3.0 to 4.3.3 servers,
+fixes the ship colors being wrong.
+-suppress database reset in AutoUpdate mode for SP: Atlantis
+-add timestamp checks to the Lost processing.
+
+version 2.5.16 changes: (Ron Koenderink)
+-added support for 4.3.4 servers for changes to xdump
+for fleet/army/wing.
+
+version 2.5.14 changes: (Ron Koenderink)
+-added support for 4.3.4 servers for changes to xdump
+nation and countries.
+-switch relations to xdump commands for 4.3.4 servers.
+-added support SP: Atlantis changes support to xdump
+nation and countries.
+
+version 2.5.12 changes: (Ron Koenderink)
+-added more support for South Pacific: Atlantis
+-added missed avail for units for 4.3.X servers.
+-removed the unused commodities for SP: Atlantis.
+-enabled radar and improve menus for for SP: Atlantis.
+-fixed bomb prompt response to deal with SP: Atlantis changes.
+-added infra for SP: Atlantis.
+-switched XMLRPC to be asychronous communications (experimental)
+-fixed nuke combo box for range tool.
+
+version 2.5.10 changes: (Ron Koenderink)
+-added South Pacific: Search for Atlantis theme game.
+-added support for the nuke id used 4.3.3 servers,
+-added Nuke unit grid.
+-fixed xdump Infrastructure parsing.
+
+version 2.5.8 changes: (Ron Koenderink)
+-fixed defense values for sector show sectors.
+-fixed level values for sector show capabilities, prevents
+negative efficency damage.
+-enhanced Clear function to clear AirCombat records by date.
+-added flash conversion logging as an option.
+-added show sector b information equivalent for 4.3.X servers.
+-completed the remaining fields for unit grid for 4.3.X servers.
+-fixed tech level for 4.3.X servers in Show Tool.
+-fixed refreshing the Show Tool when the data changes for 4.3.X servers.
+-fixed refreshing the Unit lists when marching or navigating.
+
+version 2.5.6 changes: (Ron Koenderink)
+-fixed No Current Record when break a new game using 4.3.0 servers.
+
+version 2.5.4 changes: (Ron Koenderink)
+-fixed the loading of the unit characteristics for 4.3.0 servers.
+Remove any left over data.
+-fixed starting with 4.3.0 servers with AutoUpdate turned off.
+-fixed the loading of the units and sector tables for 4.3.0 servers.
+Remove any left over data.
+-added attack and defense values for ships, land units and planes for
+4.3.0 servers.
+
+version 2.5.2 changes: (Ron Koenderink)
+-fixed mobility costs for ships and land units in 4.3.0 servers.
+-fixed the range and mobility costs for Range Tool for 4.3.0 servers
+using new information from 4.3.0 servers.
+-fixed transport costs for planes for South Pacific.
+-update the unit grid if a ship moves out of the grid being displayed.
+-fixed the unit counts for ships for 4.3.0 servers.
+
+version 2.5.0 changes: (Ron Koenderink)
+-fixed the map display so enemy intelligence does not override MINED sea sector.
+-fixed Script Recording when using EmpireHub.
+-fixed Reacting Planes to work with an empty missions table.
+-added support for Max eff gain for sectors.
+-added support for building loaded units in SP 2005 via Theme option for SP 2005.
+-added support crew aboard ships helping to build ships.
+-fixed the eff/infrastructure building for forts and big city, it nows uses the
+the data from the show output.
+-changed hidden to peek to match server change in 4.2.22.
+-added back the material limit from the resource depletion.
+-use infrastructure information in the production calculations.
+-fixed a bug where BIG CITY / GOREW can not be reset.
+-fixed FleetAdd to not cancel the OK button whenever the map is touched.
+-set the OK button in the Warload form to be the default button.
+-fixed "has a sail path" for sorder.
+-fixed show ship stats to work for opt_FUEL.
+-added mission type and radius to plane grid.
+-added updating the unit grid when modifying a mission.
+-fix parsing version to deal with 4.3.0 new version format.
+-update WinACE use 4.3.0 xdump outputs instead of dump/ldump/etc.
+

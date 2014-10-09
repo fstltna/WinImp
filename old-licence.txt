@@ -1,0 +1,58 @@
+WinACE Version 2.1.0 
+(c) 1997-2001 by James A. Simons. All rights reserved.
+All Rights Reserved
+
+License Agreement  
+
+(This is the legal stuff that says that if anything goes wrong,
+its not my fault and you aren't suppose to sue me.)
+
+You should carefully read the following terms and conditions
+before using this software.  Your use of this software 
+indicates your acceptance of this license agreement and
+warranty.
+
+WinACE version 2.1.0 is a Windows 95/98/2000/NT GUI Empire Client 
+Compatible with the Wolfpack version 4.29 of the Empire Server.  
+
+WinACE is copyrighted by James A. Simons, (the AUTHOR) and remains 
+his intellectual property.  However, the AUTHOR has granted 
+permission for this version of WinACE to be freely used, 
+copied and distributed, provided that:
+
+1) no fee is charged for its use or distribution
+2) All files, including this license agreement, are distributed.
+3) All original acknowledgments and copyright notices are left 
+   intact.
+
+Disclaimer of Warranty
+
+The AUTHOR warrants that it has the right to grant this license to you.
+THIS SOFTWARE AND THE ACCOMPANYING FILES ARE PROVIDED "AS IS" AND 
+EXCEPT AS PROVIDED ABOVE, THE AUTHOR MAKE NO WARRANTIES EXPRESS 
+OR IMPLIED WITH RESPECT TO THE SOFTWARE, INCLUDING, WITHOUT 
+LIMITATION, AS TO NON-INFRINGEMENT OR THIRD PARTY RIGHTS, 
+MERCHANTABILITY, OR FITNESS FOR ANY PARTICULAR PURPOSE.
+
+IN PARTICULAR, THERE IS NO WARRANTY THAT THE SOFTWARE IS DEFECT 
+OR VIRUS FREE. The user must assume the ENTIRE risk of 
+installing and using the program. 
+
+IN NO EVENT WILL THE AUTHOR AND PROVIDERS BE LIABLE TO YOU FOR ANY
+CONSEQUENTIAL, INCIDENTAL OR SPECIAL DAMAGES, INCLUDING ANY 
+LOST PROFITS OR LOST SAVINGS, EVEN IF REPRESENTATIVES OF SUCH 
+PARTIES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, OR 
+FOR ANY CLAIM BY ANY THIRD PARTY.
+
+Upgrades
+
+From time to time, the AUTHOR may, at his discretion, provide 
+upgrades or corrections for this software.  These upgrades
+are covered by the same conditions and warrantees as the 
+original software.  The AUTHOR has no obligation to provide 
+any upgrades, corrections, or support for this software of any kind 
+
+Governing Law
+
+This agreement shall be governed by the laws of the State of
+Kentucky and of the United States of America

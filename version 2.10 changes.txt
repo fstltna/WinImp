@@ -1,0 +1,228 @@
+Version 2.10 changes
+
+Bug Fixes
+=========
+
+Fixed that waypoint were not working correctly with 
+nuke transport
+
+Fixed code that caused errors after launch/bomb with a
+nuke - was not handling % sign after damage in parsing
+for damage assessment.
+
+Added sdump for plane commands when one of the plane was
+on a carrier. (From prompt box only)  Also added sdump if a 
+"landing on carrier" message is recieved
+
+Fixed internal bestpath routine for ships to go under 
+bridges.
+
+Changed the size of several commodity fields in the database
+(food, civs, mil, etc) to handle values over 32K  (it seems
+to happen with food from time to time)
+
+Added a scroll bar to the Chi Marker tool.
+
+Added code so that when the origin shifts, the jump point coordinates
+were shifted to match
+
+Fixed the text box in the Script tool to resize with the box.
+
+Added code so that Explore Circle (nova) command would stop if
+the sector count did not increase.
+
+Fixed problem with Show/Hide Unit flag after color change
+
+Fixed ship wakes to handle moving over screen border (I hope)
+
+Added code to handle telelgram and anno messages coming in the 
+middle of dumps
+
+Fixed Oiler prompt on fuel prompt box that was not allowing unit 
+point and click
+
+Fixed parsing error when doing a manual recon from a carrier 
+
+Fixed errors when parsing "Build Nuke"
+
+Fixed problem with client locking up after "read" was typed on
+the command line.
+
+Fixed tab order on Load/Tend/Move All prompt box.
+
+
+
+Major Enhancements
+==================
+
+Sector substitution
+-------------------
+Added sector subtitution variable &s.
+Type a command on the command line with &s in place of a sector
+location.  Press down the CTRL key and Click on a sector.  The &s 
+will be replaced by the sector number and the command submitted.
+The original command will stay on the command line so it can be 
+used multiple times (good for moving guns to multiple sectors from
+a warehouse, for example)
+
+
+Diety Support
+-------------
+Added support for signing on as the diety, parsing diety dumps,
+and displaying a map based on diety information (including owner
+colors)  Added a diety pop up menu with Give, Set, and Hidden.
+Added a world-building tool to let you designate sectors with
+a click of the mouse  (build land mass, etc) and to copy/paste
+a range of sectors (good for copying duplicate start islands)
+
+
+Build Selection Tool
+--------------------
+Added ability to Center Map on current build sector.  Replaced
+the Next button with forward and backward option.  Added forward
+and backward to next problem sector option as well.  Added button
+to Pull needed supplies from distribution center if available.
+
+Order Prompt Box
+----------------
+Rewrote the prompt box for orders to allow easier setup of ship
+orders for cargo ships, fishing boats, etc.
+
+
+Help Support
+------------
+Added a help button to most prompt boxes that gets the info file
+for that prompt box from the server.
+
+
+Auto Retreat and mission
+------------------------
+Added retreat option to nav/march prompt box. Allows setting
+retreats at the same time you march - autofills it the reverse
+of the last path taken.  There is an line on the option menu that
+lets to default the auto-retreat on or off.
+
+Also added a check box to allows a mission (interdiction/reserve)
+to be set after the unit is moved.  If selected, All ships are set 
+on interdiction.  Land units that can fire are set on interdiction, 
+other land units units with a defense of one or greater are set 
+on reserve.
+
+
+Missions and order tracking
+---------------------------
+The database now tracks units on a mission.  Units with a current
+mission are highlighted in red in the uint box, and the current 
+mission shows in the status bar when the cursor is in the unit 
+box over that unit. The mission database is set as the result 
+of the mission commands or a mission query.  The mission 
+database entry is automatically removed when a unit is moved.
+
+The database also keeps track of ships orders, and highlights 
+ships with orders in a similar fashion using blue.  (Ships that have
+both orders and missions are highligted in purple).  The orders
+database is only updated when you do an sorder or qorder command.
+
+
+Auto-fortify tool
+-----------------
+Designed to allow a quick method to use up all excess unit mobility 
+right before an update to forify units.  Allows customization by unit
+of how much mobility to use.
+
+
+Minor Enhancements
+==================
+Added option to abort further error messages.
+
+Added reminder to get new version on World Size errors
+
+Added unit count to bottom of unit list on the
+Unit Tab of sector box
+
+Changed status bar to widen the description box. (Removed
+Repeat button - sorry Chris :)
+
+Adding warnings to blitz setup tools (et. al)
+
+Replaced Unit Type box with type buttons for faster toggles
+
+Added logic to show only flight capable planes on bomb/drop/fly 
+prompt box.  After box is closed, will return to prior display
+
+Activated "Abort on Return Fire" check box on Fire Prompt box,
+If this box is checked, and multi-fire is request, fire commands
+will abort on the first return fire.
+
+Added option to Famine Relief tool to allow selection of 
+individual sectors by clicking on the grid row.
+
+Added Unit pop-up menus to unit box.  Left click on a unit in the 
+unit box and the appropriate pop-up menu will appear.  When a prompt
+box is selected, highlighted units will be automatically filled in 
+the prompt box.
+
+Added territory to Misc sector menu
+
+Added "show warships only" option to game options
+
+Added "no iron" option to game option
+
+Added "suppress bmap refresh" option to prevent bmap refreshes 
+with large bmaps.
+
+Added "plague risk" and "mobility cost" to the graduated color options
+Note - plague risk needs some work, may not be accurate yet.
+
+Enabled the timer button on the scripting tool to run scripts at 
+a certain time before the update.  Timed script settings are cleared
+each time you restart the program, however.
+
+Updated Retreat prompt box with selections
+
+Explore box will default to mil if there is no available civs in 
+the starting sector.
+
+Unit box will stay on the same type of unit when switching between
+sectors if that type of unit is present in the new sector.
+
+Ship id column of unit box will "remember" its size if its manually 
+resized. (for the current session only)
+
+
+Disclamers
+----------
+The damage assesment tool that predicts the new efficency may not 
+work correctly with DEF_INFRA option.  (it assumes the sector is fully
+improved)
+
+WinACE's food predictions (as used by the famine relief tool) are 
+sometimes one food short of what starvation says is required.  Tests
+show WinACE is correct, and no-one will actually starve.  (I always
+give them the extra food anyway using the avoid starvation option)
+
+When sectors are lost to che at the update, the server sometimes does
+not add them to the "lost" file.  This means that WinACE will not pick
+them up as lost and will still show them as yours.  You will need to
+do an Update Sectors off the Database menu post update to be sure.
+
+The plague risk tool is new and untested, and probably wrong.  I'll
+work on fixing it for a patch release.
+
+Missions are not automatically deleted when a unit is lost, so if you
+build a new unit with the same number, the WinACE may color it red 
+thinking it has the "old" mission.  Take the "update missions" option
+off the Database menu to refresh all missions.   The same applies to
+ship orders.
+
+Blitz setup was designed for the old vampire blitz (now defunct) and
+may not work with the newer blitzs.  It doesn't know about such things
+as GO_RENEW and BIG_CITIES
+
+The production summary tool assumes that all thresholds will be met 
+when doing distribution point mobility calculations.  For this reason
+it is usually conservative.  It does not count stockpiles in the 
+distribution center as "on-hand" if the distribution center has a 
+different distribution point.
+
++++ End of File ++++
